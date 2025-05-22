@@ -1,0 +1,478 @@
+/* Estilos Globais e Fundo */
+body {
+    background-image: url('img/Fundo.png'); /* CERTIFIQUE-SE QUE ESTE CAMINHO ESTÁ CORRETO */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f0f0f0;
+    padding-top: 90px; /* Ajuste conforme a altura da sua navbar */
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+}
+
+/* Navbar */
+.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(10, 10, 10, 0.25); /* Leve fundo para o blur funcionar melhor */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #F3EDAE !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.navbar-brand img {
+    height: 60px !important;
+    width: auto !important;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.navbar-nav .nav-link {
+    color: #F3EDAE !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #cdae31 !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Seção Hero (Início) */
+.hero-section {
+    min-height: calc(100vh - 90px); /* Ajuste se o padding-top do body mudar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.hero-section h1 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 700;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.hero-section .lead {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f0f0f0;
+}
+
+.hero-section .btn-primary {
+    background-color: #F3EDAE;
+    border: 2px solid #cdae31;
+    color: #382e00;
+    font-weight: 600;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #cdae31;
+    border-color: #F3EDAE;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Seções de Conteúdo Gerais */
+.content-section {
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 50px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.12); /* Borda sutil para delimitar seções */
+}
+
+.content-section h2 { /* Títulos H2 dentro de .content-section */
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.section-subtitle { /* Subtítulos H3, H4 etc. dentro de .content-section */
+    color: #F3EDAE;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem !important;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* === Estilos Melhorados para Cards de Áreas de Atuação (#servicos) === */
+#servicos .card-atuacao {
+    border: 1px solid rgba(243, 237, 174, 0.35);
+    border-radius: 18px;
+    color: #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15),
+                inset 0 0 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem;
+    background-color: rgba(15, 15, 15, 0.1); /* Fundo MUITO sutil para dar base ao brilho e conteúdo */
+}
+
+#servicos .card-atuacao:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(243, 237, 174, 0.8);
+    box-shadow: 0 10px 25px rgba(243, 237, 174, 0.1),
+                0 8px 20px rgba(0,0,0,0.25),
+                inset 0 0 10px rgba(0,0,0,0.15);
+}
+
+#servicos .card-atuacao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(to right, 
+                                transparent 0%, 
+                                rgba(255, 255, 255, 0.08) 50%,
+                                transparent 100%);
+    transform: skewX(-25deg);
+    opacity: 0;
+    transition: left 0.5s ease-in-out, opacity 0.4s ease;
+    z-index: 0; /* Atrás do card-body */
+}
+
+#servicos .card-atuacao:hover::before {
+    left: 110%;
+    opacity: 1;
+    transition-duration: 0.7s;
+}
+
+#servicos .card-atuacao .card-body {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    position: relative; /* Para o conteúdo ficar acima do brilho */
+    z-index: 1;
+}
+
+#servicos .card-atuacao .icon-wrapper {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-image: linear-gradient(145deg, rgba(243, 237, 174, 0.08), rgba(130, 109, 43, 0.18));
+    border: 2px solid rgba(243, 237, 174, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: background-image 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#servicos .card-atuacao:hover .icon-wrapper {
+    border-color: rgba(243, 237, 174, 0.9);
+    transform: scale(1.1);
+    background-image: linear-gradient(145deg, rgba(243, 237, 174, 0.12), rgba(130, 109, 43, 0.28));
+}
+
+#servicos .card-atuacao .icon-wrapper .bi {
+    font-size: 2.2rem;
+    color: #F3EDAE;
+    text-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#servicos .card-atuacao .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 0.6rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+#servicos .card-atuacao .card-text {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: #cccccc;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+    margin-bottom: 0;
+}
+
+/* Estilos para Seção Sobre Nós (se precisar de algo específico) */
+.lead-sm {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    margin-bottom: 1rem;
+}
+
+.profile-oab {
+    font-weight: 600;
+    color: #F3EDAE;
+    margin-bottom: 0.75rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.contact-details-inline {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Aplicado ao P para herança do link */
+}
+.contact-details-inline i {
+    color: #F3EDAE;
+    margin-right: 8px;
+    text-shadow: none;
+}
+
+.hr-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(243, 237, 174, 0), rgba(243, 237, 174, 0.55), rgba(243, 237, 174, 0));
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Fundo e corte para a foto do Sobre */
+.sobre-foto-bg {
+    background: rgba(0, 0, 0, 0.4); /* cor de fundo, ajuste como quiser */
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    max-width: 100%;
+    width: 100%;
+    height: 500px; /* altura visível da foto, ajuste conforme necessário */
+    overflow: hidden; /* esconde o que passar da altura */
+    display: flex;
+    align-items: flex-start; /* alinha o topo da imagem */
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.sobre-foto-bg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0; /* já tem borda no container */
+    box-shadow: none;
+}
+
+/* Formulário de Contato e Informações de Contato */
+#contato label {
+    color: #F3EDAE;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#contato .form-control {
+    border: 1px solid rgba(243, 237, 174, 0.4);
+    color: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.03); /* Fundo MUITO sutil para inputs */
+}
+
+#contato .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#contato .form-control:focus {
+    border-color: #F3EDAE;
+    color: #f8f9fa;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3), 0 0 0 0.25rem rgba(243, 237, 174, 0.2);
+    background-color: rgba(255,255,255,0.05);
+}
+
+#contato .btn-primary { /* Botão de envio do formulário de contato */
+    background-color: #F3EDAE;
+    border: 2px solid #cdae31;
+    color: #382e00;
+    font-weight: 600;
+    padding: 10px 25px;
+    font-size: 1.05rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#contato .btn-primary:hover {
+    background-color: #cdae31;
+    border-color: #F3EDAE;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Aplicado ao P para herança do link */
+}
+.contact-item i {
+    margin-right: 12px;
+    margin-top: 0.25rem;
+    color: #F3EDAE;
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+    text-shadow: none;
+}
+.contact-item .ms-4 {
+    display: block;
+}
+
+.contact-professional-title {
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.contact-link {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-link:hover {
+    color: #F3EDAE;
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    color: #adb5bd;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.2); /* Leve fundo para o rodapé */
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer .contact-address i {
+    color: #adb5bd;
+    text-shadow: none;
+}
+
+.contact-link-footer {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-link-footer:hover {
+    color: #F3EDAE;
+}
+footer .mx-2 { /* Separador | no rodapé */
+    color: rgba(255,255,255,0.3);
+}
+
+
+/* Opcional: Mapa Responsivo */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+/* Ajustes Responsivos (Exemplos) */
+@media (max-width: 991.98px) { /* Abaixo de telas grandes (lg) */
+    .navbar-nav .nav-link {
+        padding: 0.8rem 1rem;
+        font-size: 1.05rem;
+    }
+    .hero-section {
+        min-height: calc(100vh - 76px);
+    }
+    .content-section {
+        padding: 40px 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .content-section h2 {
+        font-size: 2rem;
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+    .col-lg-7.mb-5.mb-lg-0 { /* Espaçamento entre formulário e contatos no mobile */
+        margin-bottom: 3rem !important;
+    }
+    /* Cards de atuação passam para 2 por linha */
+}
+
+@media (max-width: 767.98px) { /* Abaixo de telas médias (md) */
+    body {
+        padding-top: 76px; /* Ajustar conforme altura da navbar mobile colapsada */
+    }
+    .navbar-brand img {
+        height: 50px !important;
+    }
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+    #servicos .card-atuacao .card-body {
+        padding: 1.2rem;
+    }
+    #servicos .card-atuacao {
+        padding: 0.8rem; /* Reduzir padding geral do card no mobile */
+    }
+    /* Cards de atuação passam para 1 por linha (devido ao col-md-6) */
+}
+
+@media (max-width: 575.98px) { /* Telas pequenas (sm) */
+    .content-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .section-subtitle {
+        font-size: 1.3rem;
+    }
+    .contact-item i {
+        font-size: 1rem; /* Ícones de contato um pouco menores */
+        margin-right: 8px;
+    }
+}
