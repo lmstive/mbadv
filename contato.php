@@ -8,7 +8,7 @@ header("Expires: 0");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // --- CONFIGURAÇÕES ---
-    $email_destino = "contatombadvocacia@gmail.com"; // <<< !!! COLOQUE SEU E-MAIL AQUI !!!
+    $email_destino = "contatembadvocacia@gmail.com"; // <<< !!! COLOQUE SEU E-MAIL AQUI !!!
     $nome_site = "MB Advocacia";
     // -------------------
 

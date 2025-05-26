@@ -461,6 +461,12 @@ footer .mx-2 { /* Separador | no rodapé */
         padding: 0.8rem; /* Reduzir padding geral do card no mobile */
     }
     /* Cards de atuação passam para 1 por linha (devido ao col-md-6) */
+
+     .sobre-foto-bg {
+        /* TENTE VALORES MENORES AQUI */
+        height: 300px; /* <<< ANTES ERA 380px. Tente 300px, 280px, 250px... */
+        background-position: center 25%; /* <<< Talvez precise ajustar aqui também! */
+    }
 }
 
 @media (max-width: 575.98px) { /* Telas pequenas (sm) */
@@ -476,3 +482,4 @@ footer .mx-2 { /* Separador | no rodapé */
         margin-right: 8px;
     }
 }
+
